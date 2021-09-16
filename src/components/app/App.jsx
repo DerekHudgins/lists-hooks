@@ -1,5 +1,19 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Main from '../../containers/Main';
 
-export default function App() {
-  return <h1>Hello World</h1>;
-}
+const App = () => {
+  return (
+    <>
+      <div className="main">
+        <Router>
+          <Switch>
+            <Route path="/" exact component={Main} />
+          </Switch>
+        </Router>
+      </div>
+    </>
+  );
+};
+
+export default App;
